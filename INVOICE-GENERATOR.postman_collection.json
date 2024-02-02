@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "3cffc5c5-f24a-4302-8eb7-232123184682",
+		"name": "INVOICE-GENERATOR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21299163",
+		"_collection_link": "https://martian-station-474043.postman.co/workspace/My-Workspace~68ec1087-9178-4aa9-8599-3755e2102b7a/collection/21299163-3cffc5c5-f24a-4302-8eb7-232123184682?action=share&source=collection_link&creator=21299163"
+	},
+	"item": [
+		{
+			"name": "CREATE USER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mr\",\r\n    \"name\": \"Rakesh Tripathy\",\r\n    \"phone\": \"7907697091\",\r\n    \"email\": \"rakesh1@gmail.com\",\r\n    \"password\": \"Rakesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createUser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"rakesh1@gmail.com\",\r\n    \"password\": \"Rakesh@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "craete product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Product 1\",\r\n        \"quantity\": 3,\r\n        \"rate\": 150\r\n    },\r\n    {\r\n        \"name\": \"Product 2\",\r\n        \"quantity\": 2,\r\n        \"rate\": 200\r\n    },\r\n    {\r\n        \"name\": \"Product 3\",\r\n        \"quantity\": 5,\r\n        \"rate\": 60\r\n    },\r\n    {\r\n        \"name\": \"Product 4\",\r\n        \"quantity\": 1,\r\n        \"rate\": 300\r\n    },\r\n    {\r\n        \"name\": \"Product 5\",\r\n        \"quantity\": 4,\r\n        \"rate\": 120\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateUser/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateUser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewQuotations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/viewQuotations/65ba60a94a67658ee26e9211",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"viewQuotations",
+						"65ba60a94a67658ee26e9211"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
