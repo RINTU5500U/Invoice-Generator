@@ -145,6 +145,9 @@ module.exports = {
                 .text(`Grand Total`, 300, 390)  // Adjust the Y-coordinate here
                 .text(`₹ ${fetchData[0].grandTotal}`, 400, 390);
 
+            doc.fontSize(10)
+                .text(`Valid Until : ${new Date().toLocaleDateString()}`, 50, 600); // Adjust the Y-coordinate as needed
+
 
             doc.end();
         } catch (error) {
