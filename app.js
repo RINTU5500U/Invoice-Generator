@@ -16,3 +16,21 @@ app.use("/", route)
 app.listen(PORT, () => {
     console.log("Express is running on port " + PORT)
 })
+
+
+// how many instance we can create
+// about instance bill 
+// nginx
+// ci/cd tool
+// route 53
+// cloud front
+
+// Console sign-in URL
+
+// https://637423536090.signin.aws.amazon.com/console
+// User name
+
+// biswajit
+// Console password
+
+// }oP8Rp2$

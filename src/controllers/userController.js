@@ -5,16 +5,21 @@ const axios = require('axios')
 const pdfkit = require('pdfkit')
 const jwt = require('jsonwebtoken')
 
-
 module.exports = {
     register: async (req, res) => {
         try {
-            const { email } = req.body
-            const findUniqueEmail = await userModel.findOne({ email })
-            if (findUniqueEmail) {
-                return res.status(400).send({ status: true, msg: "One user is availble with this email  .. so please try different email" })
-            }
-            let saveData = await userModel.create(req.body)
+            // const { email } = req.body
+            // const findUniqueEmail = await userModel.findOne({ email })
+            // if (findUniqueEmail) {
+            //     return res.status(400).send({ status: true, msg: "One user is availble with this email  .. so please try different email" })
+            // }
+            const objectId = new mongoose.Types.ObjectId()
+            req.body._id = objectId
+            console.log(objectId.toHexString())
+            console.log(req.body)
+            let model = new userModel(req.body)
+            console.log(model)
+            let saveData = await userModel.collection.insertOne(model)
             return res.status(201).send({ status: true, msg: "Data created successfully", Data: saveData })
         } catch (error) {
             return res.status(500).send({ status: false, msg: error.message })

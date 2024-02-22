@@ -8,7 +8,7 @@ const { userValidation, loginValidation, productValidation } = require("../middl
 router.get('/hello', (req, res) => {
     return res.send('welcome to the invoice generator')
 })
-router.post('/register', userValidation, register)
+router.post('/register', register)
 router.post('/login', loginValidation, login)
 router.post('/addProduct/:userId', authentication, productValidation, addProduct)
 router.get('/viewQuotations/:userId', authentication, authorization, viewQuotations)
